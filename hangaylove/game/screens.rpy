@@ -1605,3 +1605,87 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+init:
+    screen stat_overlay:
+        frame:
+            padding (15, 15)
+            background "#4f5a6680"
+            align (1.0, 0.0)
+            xmaximum 250
+            ymaximum 200
+            vbox:
+
+                text "AA{space=15}[persistent.love[0]]" size 16
+                bar:
+                    value persistent.love[0]
+                    range 100
+                    style "fixed_bar"
+                text " " size 3
+                text "BB{space=15}[persistent.love[1]]" size 16
+                bar:
+                    value persistent.love[1]
+                    range 100
+                    xalign 0.0
+                    style "fixed_bar"
+                text " " size 3
+                text "CC{space=15}[persistent.love[2]]" size 16
+                bar:
+                    value persistent.love[2]
+                    range 100 
+                    xalign 0.5
+                    style "fixed_bar" 
+init -5 python:    # 호감도 바 스타일    
+    style.fixed_bar = Style(style.default)      
+
+    style.fixed_bar.xmaximum = 200            
+
+    style.fixed_bar.ymaximum = 15           
+
+    style.fixed_bar.left_gutter = 0    
+
+    style.fixed_bar.right_gutter = 0     
+
+    style.fixed_bar.left_bar = Frame("images/bar_full.png", 0, 0)   
+
+    style.fixed_bar.right_bar = Frame("images/bar_empty.png", 0, 0) 
+
+define persistent.love = [80, 20, 10] 
+
+
+
+label start: 
+    scene bg building evening         
+
+    show screen stat_overlay
+
+    "SHOW"            
+
+    $ persistent.love[2] += 30    
+
+    hide screen stat_overlay
+
+    "HIDE"
+
+    return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
