@@ -8,8 +8,9 @@ define ma = Character("민아")
 define sr = Character("서린")
 define jh = Character("지혜")
 define rn = Character("리나")
-define ny = Character("노윤아")
+define ny = Character("담임 선생님 노윤아")
 define ms = Character("민수")
+define fr = Character("학생")
 
 default affection_yoonseo = 0
 default affection_mina = 0
@@ -29,12 +30,12 @@ label start:
     $ persistent.love[2] += 30    
     with dissolve
 
-    h "스무 살."
-    h "다시 시작하기엔 애매한 나이다."
+    h "열아홉 살."
+    h "인생에서 가장 중요하다고 할 수 있는 시기다."
 
-    h "영진 아카데미."
-    h "고등학교도, 대학도 아닌 곳."
-    h "하지만 여긴, 다시 시작하려는 사람들만 모여 있다."
+    h "영진고등학교."
+    h "새롭게 전학 온, 시골의 한 고등학교."
+    h "하지만 여긴, 공부에만 집중하고 싶은 나를 위한 공간이다."
 
     jump day1
 
@@ -42,10 +43,19 @@ label start:
 # -------------------------
 label day1:
 # 소꿉친구 윤서
+# 윤서만나고 선생님 만나고 기타등등
 # -------------------------
 
     scene black
-    "강의실."
+    "교실."
+
+    "교실 문 안에서는 학생들이 떠드는 소리와 선생님이 중재시키는 등 다양한 소리가 들린다."
+    "그리고, 나는 문 앞에서 기다리는 중이다."
+    
+    ny "들어와, 전학생"
+
+    "그 말과 함께, 나는 교실문을 열고 들어갔다."
+
 
     ys "……설마, 한결?"
 
@@ -267,6 +277,7 @@ label solo_end:
     "아무도 선택하지 못했다."
     "💔 솔로 엔딩"
     return
+
 
 
 
