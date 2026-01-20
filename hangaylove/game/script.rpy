@@ -263,3 +263,4 @@ label solo_end:
     "💔 솔로 엔딩"
     return
 
+
