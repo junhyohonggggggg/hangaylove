@@ -1,6 +1,6 @@
-# =====================================
-# 영진 아카데미 - 연애 시뮬 공통 루트
-# =====================================
+# =====================================#
+# 영진 아카데미 - 연애 시뮬 공통 루트     # 
+# =====================================#
 
 
 
@@ -95,7 +95,7 @@ label day1:
             $ love['ys'] += 1
             ys "응. 맞아."
         "잘 지냈어?":
-            $ love['ys'] += 2
+            $ love['ys'] += 3
             ys "…그럭저럭."
 
     ys "오랜만이다, 우리."
@@ -122,7 +122,7 @@ label day2:
 
     menu:
         "반가워.":
-            $ love['ma'] += 2
+            $ love['ma'] += 3
             ma "헤헤. 역시 느낌이 좋았어."
         "왜 나 알아?":
             $ love['ma'] += 1
@@ -144,7 +144,7 @@ label day3:
 
     menu:
         "추천 좀 해줄래요?":
-            $ love['sr'] += 2
+            $ love['sr'] += 3
             sr "……이쪽이에요."
         "그냥 둘러보려고요.":
             $ love['sr'] += 1
@@ -169,7 +169,7 @@ label day4:
 
     menu:
         "알겠습니다.":
-            $ love['jh'] += 2
+            $ love['jh'] += 3
             jh "협조해줘서 고마워."
         "생각보다 딱딱하네요.":
             $ love['jh'] -= 1
@@ -193,7 +193,7 @@ label day5:
             $ love['rn'] -= 1
             rn "하, 역시 재미없네."
         "처음 뵙겠습니다.":
-            $ love['rn'] += 1
+            $ love['rn'] += 3
             rn "오? 예의는 있네."
 
     rn "보통은 다 피하거든."
@@ -246,21 +246,32 @@ label route_check:
 # 루트 판정
 # -------------------------
 
-    if love['ma'] >= 3:
-        jump mina_route
-    elif love['ys'] >= 3:
-        jump yoonseo_route
-    elif love['sr'] >= 3:
-        jump seorin_route
-    elif love['jh'] >= 2:
-        jump jihye_route
-    elif love['rn'] >= 2:
-        jump rina_route
-    elif love['ms'] >= 3:
-        jump male_route
-    else:
-        jump solo_end
+label route_selection:
+    
+    menu:
+        "누구의 루트로 진행할까요?"
 
+        
+        "미나 (Mina)" if love['ma'] >= 3:
+            jump mina_route
+
+        "윤서 (Yoonseo)" if love['ys'] >= 3:
+            jump yoonseo_route
+
+        "서린 (Seorin)" if love['sr'] >= 3:
+            jump seorin_route
+
+        "지혜 (Jihye)" if love['jh'] >= 3:
+            jump jihye_route
+
+        "리나 (Rina)" if love['rn'] >= 3:
+            jump rina_route
+
+        "민수 (Minsu)" if love['ms'] >= 3:
+            jump male_route
+
+    
+    jump solo_end
 
 # -------------------------
 label mina_route:
