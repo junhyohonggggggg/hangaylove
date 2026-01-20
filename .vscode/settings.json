@@ -5,6 +5,5 @@
         "**/*.rpymc": true,
         "**/cache/": true,
         "*.rpy": "renpy"
-        
     }
 }

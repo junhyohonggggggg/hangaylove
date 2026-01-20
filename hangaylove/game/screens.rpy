@@ -1617,25 +1617,50 @@ init:
             ymaximum 200
             vbox:
 
-                text "윤서{space=15}[persistent.love[0]]" size 16
+                text "윤서{space=15}[love['ys']]" size 16
                 bar:
-                    value persistent.love[0]
+                    value love['ys']
                     range 100
                     style "fixed_bar"
                 text " " size 3
-                text "민아{space=15}[persistent.love[1]]" size 16
+                text "민아{space=15}[love['ma']]" size 16
                 bar:
-                    value persistent.love[1]
+                    value love['ma']
                     range 100
                     xalign 0.0
                     style "fixed_bar"
                 text " " size 3
-                text "서린{space=15}[persistent.love[2]]" size 16
+                text "서린{space=15}[love['sr']]" size 16
                 bar:
-                    value persistent.love[2]
+                    value love['sr']
                     range 100 
                     xalign 0.5
                     style "fixed_bar" 
+                text "지혜{space=15}[love['jh']]" size 16
+                bar:
+                    value love['jh']
+                    range 100
+                    style "fixed_bar"
+                text " " size 3
+                text "리나{space=15}[love['rn']]" size 16
+                bar:
+                    value love['rn']
+                    range 100
+                    xalign 0.0
+                    style "fixed_bar"
+                text " " size 3
+                text "노윤아{space=15}[love['ny']]" size 16
+                bar:
+                    value love['ny']
+                    range 100 
+                    xalign 0.5
+                    style "fixed_bar" 
+                text "민수{space=15}[love['ms']]" size 16
+                bar:
+                    value love['ms']
+                    range 100
+                    style "fixed_bar"
+
 init -5 python:    # 호감도 바 스타일    
     style.fixed_bar = Style(style.default)      
 
@@ -1651,7 +1676,7 @@ init -5 python:    # 호감도 바 스타일
 
     style.fixed_bar.right_bar = Frame("images/bar_empty.png", 0, 0) 
 
-define persistent.love = [80, 20, 10] 
+#define persistent.love = [80, 20, 10] 
 
 
 

@@ -2,7 +2,10 @@
 # 영진 아카데미 - 연애 시뮬 공통 루트
 # =====================================
 
-default persistent.love = [0, 0, 0, 0, 0]
+
+
+
+
 define h = Character("한결")
 define ys = Character("윤서")
 define ma = Character("민아")
@@ -21,14 +24,25 @@ default affection_rina = 0
 default male_flag = 0
 
 
+
 label start:
         
     scene school1  
     
     show screen stat_overlay    
     
+    default love = {
+    "ys": 0,
+    "ma": 0,
+    "sr": 0,
+    "jh": 0,
+    "rn": 0,
+    "ny": 0,
+    "ms": 0
+}
+    $ love['sr'] += 30   #이거 왜 있음?
     
-    $ persistent.love[2] += 30    
+
    
 
     h "열아홉 살."
@@ -78,10 +92,10 @@ label day1:
 
     menu:
         "너도 영진고 다녔었구나?":
-            $ affection_yoonseo += 1
+            $ love['ys'] += 1
             ys "응. 맞아."
         "잘 지냈어?":
-            $ affection_yoonseo += 2
+            $ love['ys'] += 2
             ys "…그럭저럭."
 
     ys "오랜만이다, 우리."
@@ -108,10 +122,10 @@ label day2:
 
     menu:
         "반가워.":
-            $ affection_mina += 2
+            $ love['ma'] += 2
             ma "헤헤. 역시 느낌이 좋았어."
         "왜 나 알아?":
-            $ affection_mina += 1
+            $ love['ma'] += 1
             ma "눈에 띄었거든요."
 
     ma "앞으로 자주 봬요."
@@ -130,10 +144,10 @@ label day3:
 
     menu:
         "추천 좀 해줄래요?":
-            $ affection_seorin += 2
+            $ love['sr'] += 2
             sr "……이쪽이에요."
         "그냥 둘러보려고요.":
-            $ affection_seorin += 1
+            $ love['sr'] += 1
             sr "아… 네."
 
     "말은 없지만, 시선이 느껴진다."
@@ -155,10 +169,10 @@ label day4:
 
     menu:
         "알겠습니다.":
-            $ trust_jihye += 2
+            $ love['jh'] += 2
             jh "협조해줘서 고마워."
         "생각보다 딱딱하네요.":
-            $ trust_jihye -= 1
+            $ love['jh'] -= 1
             jh "감정은 나중 문제야."
 
     jump day5
@@ -176,10 +190,10 @@ label day5:
 
     menu:
         "문제 있어?":
-            $ affection_rina -= 1
+            $ love['rn'] -= 1
             rn "하, 역시 재미없네."
         "처음 뵙겠습니다.":
-            $ affection_rina += 1
+            $ love['rn'] += 1
             rn "오? 예의는 있네."
 
     rn "보통은 다 피하거든."
@@ -218,10 +232,10 @@ label day7:
 
     menu:
         "아무도 선택 안 했어.":
-            $ male_flag += 3
+            $ love['ms'] += 3
             ms "그럼 아직 기회 있는 거네."
         "글쎄.":
-            $ male_flag += 2
+            $ love['ms'] += 2
             ms "애매한 게 제일 위험한데."
 
     jump route_check
@@ -232,17 +246,17 @@ label route_check:
 # 루트 판정
 # -------------------------
 
-    if affection_mina >= 3:
+    if love['ma'] >= 3:
         jump mina_route
-    elif affection_yoonseo >= 3:
+    elif love['ys'] >= 3:
         jump yoonseo_route
-    elif affection_seorin >= 3:
+    elif love['sr'] >= 3:
         jump seorin_route
-    elif trust_jihye >= 2:
+    elif love['jh'] >= 2:
         jump jihye_route
-    elif affection_rina >= 2:
+    elif love['rn'] >= 2:
         jump rina_route
-    elif male_flag >= 3:
+    elif love['ms'] >= 3:
         jump male_route
     else:
         jump solo_end
