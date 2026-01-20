@@ -47,7 +47,7 @@ label day1:
 # 윤서만나고 선생님 만나고 기타등등
 # -------------------------
 
-    scene classroom1
+    scene school2
     "교실."
 
     "교실 문 안에서는 학생들이 떠드는 소리와 선생님이 중재시키는 등 다양한 소리가 들린다."
@@ -56,7 +56,8 @@ label day1:
     ny "들어와, 전학생"
 
     "그 말과 함께, 나는 교실문을 열고 들어갔다."
-
+    scene classroom1
+    show ys1 at right
 
     ys "……설마, 한결?"
 
@@ -278,6 +279,7 @@ label solo_end:
     "아무도 선택하지 못했다."
     "💔 솔로 엔딩"
     return
+
 
 
 
