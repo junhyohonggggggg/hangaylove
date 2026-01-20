@@ -1653,6 +1653,19 @@ init -5 python:    # 호감도 바 스타일
 
 define persistent.love = [80, 20, 10] 
 
+screen stat_overlay():
+    frame:
+        align (0.02, 0.02)
+        padding (10, 10)
+
+        vbox:
+            text "윤서 ♥ [affection_yoonseo]"
+            text "민아 ♥ [affection_mina]"
+            text "서린 ♥ [affection_seorin]"
+            text "지혜 ♥ [trust_jihye]"
+            text "리나 ♥ [affection_rina]"
+
+
 
 
 
