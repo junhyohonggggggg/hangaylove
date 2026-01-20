@@ -23,7 +23,7 @@ default male_flag = 0
 
 label start:
         
-    scene bg building evening   
+    scene school1  
     
     show screen stat_overlay    
     
@@ -47,7 +47,7 @@ label day1:
 # 윤서만나고 선생님 만나고 기타등등
 # -------------------------
 
-    scene black
+    scene classroom1
     "교실."
 
     "교실 문 안에서는 학생들이 떠드는 소리와 선생님이 중재시키는 등 다양한 소리가 들린다."
@@ -278,6 +278,7 @@ label solo_end:
     "아무도 선택하지 못했다."
     "💔 솔로 엔딩"
     return
+
 
 
 
