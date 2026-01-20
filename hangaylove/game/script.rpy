@@ -2,6 +2,7 @@
 # 영진 아카데미 - 연애 시뮬 공통 루트
 # =====================================
 
+default persistent.love = [0, 0, 0, 0, 0]
 define h = Character("한결")
 define ys = Character("윤서")
 define ma = Character("민아")
@@ -277,6 +278,7 @@ label solo_end:
     "아무도 선택하지 못했다."
     "💔 솔로 엔딩"
     return
+
 
 
 
