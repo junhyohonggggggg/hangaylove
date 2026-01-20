@@ -20,8 +20,21 @@ default male_flag = 0
 
 
 label start:
+        
+    scene bg building evening   
+    
+    show screen stat_overlay    
+    
+    "SHOW"    
+    
+    $ persistent.love[2] += 30    
+    
+    hide screen stat_overlay  
+   
+    "HIDE"  
+   
+    return
 
-    scene black
     with dissolve
 
     h "스무 살."
@@ -262,5 +275,6 @@ label solo_end:
     "아무도 선택하지 못했다."
     "💔 솔로 엔딩"
     return
+
 
 
