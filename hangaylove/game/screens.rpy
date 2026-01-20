@@ -1655,20 +1655,7 @@ define persistent.love = [80, 20, 10]
 
 
 
-label start: 
-    scene bg building evening         
 
-    show screen stat_overlay
-
-    "SHOW"            
-
-    $ persistent.love[2] += 30    
-
-    hide screen stat_overlay
-
-    "HIDE"
-
-    return
 
 
 
