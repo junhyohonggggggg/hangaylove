@@ -1623,7 +1623,7 @@ init:
                     range 100
                     style "fixed_bar"
                 text " " size 3
-                text "민수{space=15}[persistent.love[1]]" size 16
+                text "민아{space=15}[persistent.love[1]]" size 16
                 bar:
                     value persistent.love[1]
                     range 100
@@ -1652,6 +1652,7 @@ init -5 python:    # 호감도 바 스타일
     style.fixed_bar.right_bar = Frame("images/bar_empty.png", 0, 0) 
 
 define persistent.love = [80, 20, 10] 
+
 
 
 
