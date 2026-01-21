@@ -1614,7 +1614,7 @@ init:
             background "#4f5a6680"
             align (1.0, 0.0)
             xmaximum 250
-            ymaximum 200
+            ymaximum 600
             vbox:
 
                 text "윤서{space=15}[love['ys']]" size 16
