@@ -16,22 +16,14 @@ define ny = Character("담임 선생님 노윤아")
 define ms = Character("민수")
 define fr = Character("학생")
 
-default affection_yoonseo = 0
+default affection_yoonseo = 0      #이것들은 왜 있는겨
 default affection_mina = 0
 default affection_seorin = 0
 default trust_jihye = 0
 default affection_rina = 0
 default male_flag = 0
 
-
-
-label start:
-        
-    scene school1  
-    
-    show screen stat_overlay    
-    
-    default love = {
+default love = {
     "ys": 0,
     "ma": 0,
     "sr": 0,
@@ -40,6 +32,25 @@ label start:
     "ny": 0,
     "ms": 0
 }
+
+default shoot_count = {
+    "ys": 0,
+    "ma": 0,
+    "sr": 0,
+    "jh": 0,
+    "rn": 0,
+    "ny": 0,
+    "ms": 0
+}
+
+
+label start:
+        
+    scene school1  
+    
+    show screen stat_overlay    
+    
+
 
     $ love['ys'] += 40   #소꿉친구니까 평소 있던 호감도라는 느낌
 
@@ -105,6 +116,7 @@ label day1:
             show shoot :
                 xpos 300 
                 ypos -150
+            $ shoot_count['ys'] += 1
             $ love['ys'] -= 100
             ys "...?"
 
@@ -210,10 +222,10 @@ label day5:
     jump day6
 
 
-# -------------------------
-label day6:
-# 노윤아
-# -------------------------
+# -------------------------#
+label day6:                #
+# 노윤아                    #노?
+# -------------------------#
 
     scene black
     "상담실."
@@ -262,7 +274,7 @@ label route_selection:
         "누구의 루트로 진행할까요?"
 
         
-        "미나 (Mina)" if love['ma'] >= 3:
+        "민아 (Mina)" if love['ma'] >= 3:
             jump mina_route
 
         "윤서 (Yoonseo)" if love['ys'] >= 3:
@@ -277,6 +289,9 @@ label route_selection:
         "리나 (Rina)" if love['rn'] >= 3:
             jump rina_route
 
+        "노윤아" if love['ny'] >= 3:
+            jump ny_route
+
         "민수 (Minsu)" if love['ms'] >= 3:
             jump male_route
 
@@ -284,47 +299,18 @@ label route_selection:
     jump solo_end
 
 # -------------------------
-label mina_route:
-    scene black
-    ma "선배, 저 사실 처음부터 좋아했어요."
-    "💖 민아 루트 진입"
-    return
 
-label yoonseo_route:
-    scene black
-    ys "다시 만난 건… 우연 아니라고 생각해."
-    "💖 윤서 루트 진입"
-    return
 
-label seorin_route:
-    scene black
-    sr "말 안 해도… 알아줬으면 좋겠어요."
-    "💖 서린 루트 진입"
-    return
 
-label jihye_route:
-    scene black
-    jh "나도… 감정 가져도 될까?"
-    "💖 지혜 루트 진입"
-    return
 
-label rina_route:
-    scene black
-    rn "끝까지 온 거야?"
-    "💖 리나 루트 진입"
-    return
 
-label male_route:
-    scene black
-    ms "그럼 이제... 내 차례지?"
-    "🧑‍🤝‍🧑 히든 엔딩"
-    return
 
-label solo_end:
-    scene black
-    "아무도 선택하지 못했다."
-    "💔 솔로 엔딩"
-    return
+
+
+
+
+
+
 
 
 
