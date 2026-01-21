@@ -1616,6 +1616,7 @@ init:
             xmaximum 250
             ymaximum 600
             vbox:
+                text "호감도💖" size 25
 
                 text "윤서{space=15}[love['ys']]" size 16
                 bar:
