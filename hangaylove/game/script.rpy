@@ -23,6 +23,7 @@ default trust_jihye = 0
 default affection_rina = 0
 default male_flag = 0
 
+
 default love = {
     "ys": 0,
     "ma": 0,
@@ -145,13 +146,15 @@ label day1:
 label palestra:
     scene black
     $love['ms'] = 80
-    show ms2
+    show ms2 :
+        zoom 0.8
+        center
     ms "ㅎㅇ?"
     #scene palestra #여기 체육관 사진
     #민수랑 토크
 
     #체육복 윤서 사진
-
+    hide ms2
     jump vending_machine
 
 label vending_machine:
