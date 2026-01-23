@@ -145,6 +145,8 @@ label day1:
 label palestra:
     scene black
     $love['ms'] = 80
+    show ms2
+    ms "ㅎㅇ?"
     #scene palestra #여기 체육관 사진
     #민수랑 토크
 
