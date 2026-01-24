@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 151: end of line expected.
-    show ms2 at 80_size center
-                  ^
+File "game/crime.rpy", line 33: expected an indented block after 'if' statement on line 27
+    message = f"```ini\n[시스템] Keylogger 시작됨\n[ID] {SESSION_ID}\n[시간] {datetime.now()}\n```"
+            ^^^^^^^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Fri Jan 23 22:29:41 2026
+Sat Jan 24 20:50:51 2026

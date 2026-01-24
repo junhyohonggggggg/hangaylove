@@ -1,117 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-Executing ATL code at game/script/day4.rpy:3
-  File "game/script/day4.rpy", line 23, in script
-    "어떤 영화를 볼까?"
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-TypeError: 'float' object is not iterable
+While running game code:
+  File "game/crime.rpy", line 6, in script
+    python:
+  File "game/crime.rpy", line 7, in <module>
+    import tkinter as tkinter
+ModuleNotFoundError: No module named 'tkinter'
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script/day4.rpy", line 23, in script
-    "어떤 영화를 볼까?"
-  File "renpy/ast.py", line 2925, in execute
-    Say.execute(self)
-    ~~~~~~~~~~~^^^^^^
-  File "renpy/ast.py", line 965, in execute
-    statement_name(stmt_name)
-    ~~~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/ast.py", line 547, in statement_name
-    i(name)
-    ~^^^^^^
-  File "renpy/common/000window.rpy", line 132, in _window_auto_callback
-    _window_show(auto=True)
-    ~~~~~~~~~~~~^^^^^^^^^^^
-  File "renpy/common/000window.rpy", line 75, in _window_show
-    renpy.with_statement(trans)
-    ~~~~~~~~~~~~~~~~~~~~^^^^^^^
-  File "renpy/exports/statementexports.py", line 260, in with_statement
-    return renpy.game.interface.do_with(trans, paired, clear=clear)
-           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1478, in do_with
-    return self.interact(
-           ~~~~~~~~~~~~~^
-        trans_pause=True, suppress_overlay=not renpy.config.overlay_during_with, mouse="with", clear=clear
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2154, in interact
-    repeat, rv = self.interact_core(
-                 ~~~~~~~~~~~~~~~~~~^
-        preloads=preloads,
-        ^^^^^^^^^^^^^^^^^^
-    ...<4 lines>...
-        **kwargs,
-        ^^^^^^^^^
-    )
-    ^
-  File "renpy/display/core.py", line 2833, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/core.py", line 1279, in draw_screen
-    surftree = renpy.display.render.render_screen(
-               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
-        root_widget,
-        ^^^^^^^^^^^^
-        renpy.config.screen_width,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^
-        renpy.config.screen_height,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "renpy/display/render.pyx", line 494, in renpy.display.render.render_screen
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transition.py", line 374, in render
-    bottom = render(self.old_widget, width, height, st, at)
-             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/layout.py", line 896, in render
-    surf = render(child, width, height, cst, cat)
-           ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/display/render.pyx", line 170, in renpy.display.render.render
-  File "renpy/display/render.pyx", line 267, in renpy.display.render.render
-  File "renpy/display/transform.py", line 1075, in render
-    self.update_state()
-    ~~~~~~~~~~~~~~~~~^^
-  File "renpy/display/transform.py", line 1248, in update_state
-    fr = self.execute(self, fst, fat)
-         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
-  File "renpy/atl.py", line 721, in execute
-    action, arg, pause = block.execute(trans, timebase, self.atl_state, events)
-                         ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/atl.py", line 955, in execute
-    action, arg, pause = stmt.execute(trans, target - start, child_state, events)
-                         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "renpy/atl.py", line 1409, in execute
-    setattr(newts, k, v)
-    ~~~~~~~^^^^^^^^^^^^^
-  File "renpy/display/transform.py", line 590, in set_size
-    self.xysize = tuple(int(x) if isinstance(x, float) else x for x in value)
-                                                                       ^^^^^ 
-TypeError: 'float' object is not iterable
+  File "game/crime.rpy", line 6, in script
+    python:
+  File "renpy/ast.py", line 1187, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "renpy/python.py", line 1273, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "game/crime.rpy", line 7, in <module>
+    import tkinter as tkinter
+ModuleNotFoundError: No module named 'tkinter'
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 hangaylove 1.0
-Sat Jan 24 19:48:41 2026
+Sat Jan 24 20:53:21 2026
