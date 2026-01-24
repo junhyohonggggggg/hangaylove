@@ -2,7 +2,11 @@ $dongari=0
 label day2:
     #scene school #여기도 대충 알아서 배경
     "입학식으로 부터 며칠이 흐른 후"
+    show ms2 :
+        zoom 0.8
+        center
     ms "동아리 골라 어쩌구 저쩌구"
+    hide ms2
     menu:
         "유도부":
             $dongari="유도부"
@@ -19,7 +23,7 @@ label day2:
         "선도부":
             $dongari="선도부"
             jump dongari5
-
+    
 #동아리 마다 동아리에 맞는 배경
 
 label dongari1:
@@ -27,25 +31,35 @@ label dongari1:
     jump ms_ending
 
 label dongari2:
+    show ys3
     ys "과거 회상 어쩌구 저쩌구"
     $love['ys'] +=10
+    hide ys3
     jump day3
 
 label dongari3:
+    show ma2
     ma "반한 이유 어쩌구"
     $love['ma'] +=10
+    hide ma2
     jump day3
 
 label dongari4:
+    show sr3
     $love['sr'] = 10
     sr "조용한 대화"
     $love['sr'] += 10
+    hide sr3
     jump day3
 
 label dongari5:
+    show jh1
     $love['jh'] = 10
     jh "어쩌구 리나 잡아라"
+    hide jh1
     $love['jh'] += 5
+    show rn4
     rn "어쩌구 저쩌구"
+    hide rn4
     $love['rn'] += 5
     jump day3

@@ -1,16 +1,23 @@
 $movie=0
 label day3:
     "2주일이 지났다."
+    show ms2 :
+        zoom 0.8
+        center
     ms "학교에 관한 대화"
 
     ms "영화티켓이 마침 2장이있는데, 어떡할래?"
+    hide ms2
 
     "누구랑 영화를 볼까?"
     menu:
         "민수":
+            show ms2
             ms "으흐흐... 일루와잇!"
+            hide ms2
             jump ms_ending
         "윤서":
+            show ys3
             if love['ys']>=35 :
                 ys "ㄱㄱ"
                 $movie="윤서"
@@ -20,6 +27,7 @@ label day3:
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "민아":
+            show ma2
             if love['ma']>=35 :
                 ma "ㄱㄱ"
                 $movie="민아"
@@ -29,6 +37,7 @@ label day3:
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "서린":
+            show sr3
             if love['sr']>=35 :
                 sr "ㄱㄱ"
                 $movie="서린"
@@ -38,6 +47,7 @@ label day3:
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "지혜":
+            show jh1
             if love['jh']>=35 :
                 jh "ㄱㄱ"
                 $movie="지혜"
@@ -47,6 +57,7 @@ label day3:
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "리나":
+            show rn4
             if love['rn']>=35 :
                 rn "ㄱㄱ"
                 $movie="리나"
