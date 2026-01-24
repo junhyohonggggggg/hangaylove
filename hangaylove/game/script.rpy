@@ -170,12 +170,12 @@ label day1:
     jump palestra
 
 label palestra:
-    scene black
+    scene palestra
     show ms2 :
         zoom 0.8
         center
     ms "ㅎㅇ?"
-    #scene palestra #여기 체육관 사진
+    
     #민수랑 토크
 
     #체육복 윤서 사진
@@ -183,7 +183,7 @@ label palestra:
     jump vending_machine
 
 label vending_machine:
-    #scene vending_machine #자판기 배경
+    scene vending_machine
     #대충 더워서 자판기 간다는 한결의 혼잣말
     $love['ma']=25 #100 -> 25 하려는 상황이 안 보인다.
     show ma2

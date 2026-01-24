@@ -1,6 +1,6 @@
 $dongari=0
 label day2:
-    #scene school #여기도 대충 알아서 배경
+    scene classroom1
     "입학식으로 부터 며칠이 흐른 후"
     show ms2 :
         zoom 0.8
@@ -27,6 +27,7 @@ label day2:
 #동아리 마다 동아리에 맞는 배경
 
 label dongari1:
+    scene palestra
     ms "으흐흐... 일루와잇!"
     jump ms_ending
 
@@ -38,6 +39,8 @@ label dongari2:
     jump day3
 
 label dongari3:
+    scene library:
+        zoom 2.4
     show ma2
     ma "반한 이유 어쩌구"
     $love['ma'] +=10
@@ -45,6 +48,8 @@ label dongari3:
     jump day3
 
 label dongari4:
+    scene library:
+        zoom 2.4
     show sr3
     $love['sr'] = 10
     sr "조용한 대화"

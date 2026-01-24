@@ -1,5 +1,6 @@
 $movie=0
 label day3:
+    show black
     "2주일이 지났다."
     show ms2 :
         zoom 0.8
