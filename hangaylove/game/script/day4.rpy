@@ -1,5 +1,6 @@
 label cinema:
-    scene black
+    scene cinema2:
+        zoom 1.6
     #scene cinema #영화관 앞
     if movie=="윤서":
         show ys3
