@@ -161,7 +161,7 @@ label day1:
     show ys3
     ys "한결! 우리 다음시간 체육시간이야!"
 
-    "체욱관으로 가야겠어…"
+    "체욱관으로 가야겠어…" #욱 ㅋㅋ
     
 
 
@@ -186,15 +186,22 @@ label vending_machine:
     #scene vending_machine #자판기 배경
     #대충 더워서 자판기 간다는 한결의 혼잣말
     $love['ma']=25 #100 -> 25 하려는 상황이 안 보인다.
+    show ma2
     ma "선배 혹시 몇반이에요? 인스타아이디 교환할래요?"
     menu:
         "교환한다.":
+            hide ma2
+            show ma3
             ma "ㄳ"
             $ love['ma'] +=5
             $ love['ys'] -=5   #이거 윤서가 스토커마냥 근처에서 지켜보는거?
             "무언가 익숙한 시선이 느껴졌다."
+            hide ma3
 
         "안 한다.":
+            hide ma2
+            show ma1
             ma "ㄲㅂ"
             $ love['ys'] +=5
+            hide ma1
     jump day2
