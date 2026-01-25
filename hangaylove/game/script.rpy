@@ -313,7 +313,7 @@ label vending_machine:
 
     "나는 말없이 버튼을 눌러주었다."
     "캔이 떨어지는 소리가 난다."
-    $love['ma']=50
+    $love['ma']=30
     hide ma1
     show ma3
     ma "아! 감사합니다."
@@ -346,7 +346,7 @@ label vending_machine:
             hide ma4
             show ma3
             ma "나이스!! 좋아요 제 아이디는-"
-            $ love['ma'] +=15
+            $ love['ma'] +=10
             $ love['ys'] -=5   #이거 윤서가 스토커마냥 근처에서 지켜보는거?
             hide ma3
             "...그렇게, 민아는 신난 표정으로 유유히 반으로 떠났다"
@@ -384,11 +384,9 @@ label vending_machine:
     show ys1
     "아는 얼굴도 있었고,"
     hide ys1
-    with fade
     show mams
-    "처음 보는 얼굴도 있었다."
+    "처음 보는 얼굴들도 있었다."
     hide mams
-    with fade
     "아직은 아무것도 정해지지 않았다."
 
     "하지만—"
