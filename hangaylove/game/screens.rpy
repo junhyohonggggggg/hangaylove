@@ -1673,9 +1673,9 @@ init -5 python:    # 호감도 바 스타일
 
     style.fixed_bar.right_gutter = 0     
 
-    style.fixed_bar.left_bar = Frame("images/bar_full.png", 0, 0)   
+    style.fixed_bar.left_bar = Frame("images/system/bar_full.png", 0, 0)   
 
-    style.fixed_bar.right_bar = Frame("images/bar_empty.png", 0, 0) 
+    style.fixed_bar.right_bar = Frame("images/system/bar_empty.png", 0, 0) 
 
 #define persistent.love = [80, 20, 10] 
 
