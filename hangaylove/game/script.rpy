@@ -83,7 +83,6 @@ label day1:
     "그 말과 함께, 나는 교실문을 열고 들어갔다."
     #나중에 여기 문열리는 오디오 넣자
     scene classroom1
-    with fade
     
     show ny1
     ny "오늘 전학 온 학생이다. 자기소개해"
@@ -289,6 +288,7 @@ label palestra:
 
 label vending_machine:
     scene vending_machine
+    with fade
     #대충 더워서 자판기 간다는 한결의 혼잣말
     
     "체육 수업이 끝나고, 쉬는 시간이 되어 교실은 빠르게 비어간다."
@@ -378,11 +378,17 @@ label vending_machine:
     "집으로 돌아가는 길."
 
     "오늘 하루를 떠올려본다."
-
+    scene black
+    with fade
     "전학 첫날."
+    show ys1
     "아는 얼굴도 있었고,"
+    hide ys1
+    with fade
+    show mams
     "처음 보는 얼굴도 있었다."
-
+    hide mams
+    with fade
     "아직은 아무것도 정해지지 않았다."
 
     "하지만—"
@@ -390,7 +396,6 @@ label vending_machine:
     "이 학교에서의 선택이,"
     "생각보다 오래 남을 것 같은 예감만은"
     "분명했다."
-    scene black
-    with fade
+    
 
     jump day2
