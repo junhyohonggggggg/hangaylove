@@ -2,7 +2,7 @@ $movie=0
 label day3:
     show black
     "2주일이 지났다."
-    show ms3 : 
+    show ms3
     ms "학교에 관한 대화"
 
     ms "영화티켓이 마침 2장이있는데, 어떡할래?"
