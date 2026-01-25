@@ -3,7 +3,6 @@ label day2:
     scene classroom1
     "입학식으로 부터 며칠이 흐른 후"
     show ms3 :
-        zoom 0.8
         center
     ms "동아리 골라 어쩌구 저쩌구"
     hide ms3

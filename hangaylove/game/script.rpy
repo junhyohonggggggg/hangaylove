@@ -12,9 +12,10 @@ define ma = Character("민아")
 define sr = Character("서린")
 define jh = Character("지혜")
 define rn = Character("리나")
-define ny = Character("담임 선생님 노윤아")
+define ny = Character("담임교사 노윤아")
 define ms = Character("민수")
 define fr = Character("학생")
+define ex1 = Character("체육교사")
 
 default affection_yoonseo = 0      #이것들은 왜 있는겨
 default affection_mina = 0
@@ -134,7 +135,7 @@ label day1:
             jump crime_end
             #이거 다음에 바로 배드엔딩없냐
     hide ys1
-    hide ys1
+    hide ys1black
     
     #여기서 이제 나레이션할게요          
     
@@ -173,11 +174,24 @@ label day1:
 label palestra:
     scene palestra
     
-    "오늘은 자유체육이라고 하는군."
+    "체육관 문을 열자, 눅눅한 공기와 함께 공이 바닥에 튀는 소리가 귀에 들어온다."
+    "운동화가 마룻바닥을 긁는 소리, 웃음소리, 누군가의 불평."
     
+    "전학 첫날에 체육이라니."
+    "타이밍이 썩 좋다고는 못 하겠다."
     
+    "체육 교사는 호루라기를 불며 출석을 부른다."
+    
+    ex1 "오늘은 자유 활동이다. 다치지 않게만 해."
+    
+    "아직은 시작일 뿐이다."
+    
+    "그렇게 생각하며,"
+    "나는 체육관 문을 밀고 들어간다."
+
+
+
     show ms4 :
-        zoom 0.8
         center
     ms "ㅎㅇ?"
     
