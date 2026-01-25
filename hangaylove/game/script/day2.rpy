@@ -2,11 +2,11 @@ $dongari=0
 label day2:
     scene classroom1
     "입학식으로 부터 며칠이 흐른 후"
-    show ms2 :
+    show ms3 :
         zoom 0.8
         center
     ms "동아리 골라 어쩌구 저쩌구"
-    hide ms2
+    hide ms3
     menu:
         "유도부":
             $dongari="유도부"
@@ -32,29 +32,29 @@ label dongari1:
     jump ms_ending
 
 label dongari2:
-    show ys3
+    show ys1
     ys "과거 회상 어쩌구 저쩌구"
     $love['ys'] +=10
-    hide ys3
+    hide ys1
     jump day3
 
 label dongari3:
     scene library:
         zoom 2.4
-    show ma2
+    show ma1
     ma "반한 이유 어쩌구"
     $love['ma'] +=10
-    hide ma2
+    hide ma1
     jump day3
 
 label dongari4:
     scene library:
         zoom 2.4
-    show sr3
+    show sr1
     $love['sr'] = 10
     sr "조용한 대화"
     $love['sr'] += 10
-    hide sr3
+    hide sr1
     jump day3
 
 label dongari5:
@@ -63,8 +63,8 @@ label dongari5:
     jh "어쩌구 리나 잡아라"
     hide jh1
     $love['jh'] += 5
-    show rn4
+    show rn1
     rn "어쩌구 저쩌구"
-    hide rn4
+    hide rn1
     $love['rn'] += 5
     jump day3

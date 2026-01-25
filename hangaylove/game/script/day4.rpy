@@ -3,19 +3,19 @@ label cinema:
         zoom 1.6
     #scene cinema #영화관 앞
     if movie=="윤서":
-        show ys3
+        show ys1
         jump cinema_ys
     if movie=="민아":
-        show ma2
+        show ma1
         jump cinema_ma
     if movie=="서린":
-        show sr3
+        show sr1
         jump cinema_sr
     if movie=="지혜":
         show jh1
         jump cinema_jh
     if movie=="리나":
-        show rn4
+        show rn1
         jump cinema_rn
 
 label cinema_ys:
