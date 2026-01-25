@@ -81,8 +81,9 @@ label day1:
 
     "그 말과 함께, 나는 교실문을 열고 들어갔다."
     scene classroom1
-    
+    show ny1
     ny "오늘 전학 온 학생이다. 자기소개해"
+    hide ny1
     "문이 열리자 시선이 한꺼번에 쏟아진다."
     "나는 숨을 한번 고르고 입을 열었다."
     
@@ -135,6 +136,7 @@ label day1:
             jump crime_end
             #이거 다음에 바로 배드엔딩없냐
     hide ys1
+    hide ys2
     hide ys1black
     
     #여기서 이제 나레이션할게요          
