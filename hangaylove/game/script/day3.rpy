@@ -11,9 +11,8 @@ label day3:
     "누구랑 영화를 볼까?"
     menu:
         "민수":
-            show ms3
+            show ms0
             ms "으흐흐... 일루와잇!"
-            hide ms3
             jump ms_ending
         "윤서":
             show ys1
@@ -23,6 +22,7 @@ label day3:
                 jump cinema
             else:
                 ys "ㄴㄴ"
+                show ms0
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "민아":
@@ -33,6 +33,7 @@ label day3:
                 jump cinema
             else:
                 ma "ㄴㄴ"
+                show ms0
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "서린":
@@ -43,6 +44,7 @@ label day3:
                 jump cinema
             else:
                 sr "ㄴㄴ"
+                show ms0
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending
         "지혜":
@@ -53,7 +55,9 @@ label day3:
                 jump cinema
             else:
                 jh "ㄴㄴ"
+                show ms0
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
+                
                 jump ms_ending
         "리나":
             show rn1
@@ -63,5 +67,6 @@ label day3:
                 jump cinema
             else:
                 rn "ㄴㄴ"
+                show ms0
                 ms "뭐? 볼 사람이 없어? 일루와잇!"
                 jump ms_ending

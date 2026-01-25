@@ -27,7 +27,10 @@ label day2:
 
 label dongari1:
     scene palestra
+    show ms0
     ms "으흐흐... 일루와잇!"
+    
+
     jump ms_ending
 
 label dongari2:
