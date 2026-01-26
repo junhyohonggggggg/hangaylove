@@ -1,4 +1,4 @@
-$dongari=0
+
 label day2:
     scene classroom1
     "입학식으로 부터 며칠이 흐른 후"

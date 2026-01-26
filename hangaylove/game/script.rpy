@@ -5,7 +5,6 @@
 
 
 
-
 define h = Character("한결")
 define ys = Character("윤서")
 define ma = Character("민아")
@@ -45,13 +44,16 @@ default shoot_count = {
     "ms": 0
 }
 
+default grade = 0
+
+
 
 label start:
-        
+    $dongari="없음"
     scene school1  
     
     show screen stat_overlay    
-    
+    show screen my_ui
 
 
 
@@ -385,6 +387,7 @@ label vending_machine:
     "아는 얼굴도 있었고,"
     hide ys1
     show mams
+    
     "처음 보는 얼굴들도 있었다."
     hide mams
     "아직은 아무것도 정해지지 않았다."

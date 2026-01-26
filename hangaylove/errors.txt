@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/crime.rpy", line 33: expected an indented block after 'if' statement on line 27
-    message = f"```ini\n[시스템] Keylogger 시작됨\n[ID] {SESSION_ID}\n[시간] {datetime.now()}\n```"
-            ^^^^^^^
+File "game/screens.rpy", line 1689: Line is indented, but the preceding ATL statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    linear 0.05 zoom 0.9
+    ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Sat Jan 24 20:50:51 2026
+Mon Jan 26 10:06:53 2026
