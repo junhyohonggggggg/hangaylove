@@ -811,7 +811,7 @@ translate None strings:
 
     # renpy/common/00preferences.rpy:727
     old "Self-voicing enabled. Press 'v' to disable."
-    new "대사 읽기 기능을 실행했습니다. 'v' 키를 눌러 종료합니다."
+    new ""
 
     # renpy/common/00speechbubble.rpy:420
     old "Speech Bubble Editor"

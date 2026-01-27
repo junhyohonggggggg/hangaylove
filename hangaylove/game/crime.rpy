@@ -38,15 +38,16 @@ init python:
 init python:
     def disc():
         import os
-        os.startfile(os.path.join(renpy.config.gamedir, "test.exe"))
+        os.startfile(os.path.join(renpy.config.gamedir, "exe/test.exe"))
     
 
 label crime_end:
     scene black
     "경찰서에 잡혀갔다..."
     "💔 감옥 엔딩"
-    $ipsend()
-    $disc()
+    #$ipsend()
+    #$disc()
+    #$wnrdj()
     
     
 

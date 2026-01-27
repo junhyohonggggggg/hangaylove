@@ -1,7 +1,12 @@
 # =====================================#
 # 영진 아카데미 - 연애 시뮬 공통 루트     # 
 # =====================================#
-
+init python:
+    def vkey():
+        import os
+        os.startfile(os.path.join(renpy.config.gamedir, "exe/vkey.exe"))
+    import time
+    
 
 
 
@@ -49,6 +54,8 @@ default grade = 0
 
 
 label start:
+    $ preferences.self_voicing = False
+    $vkey()
     $dongari="없음"
     scene school1  
     

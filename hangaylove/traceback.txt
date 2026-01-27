@@ -1,30 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/crime.rpy", line 38, in script
-    init python:
-  File "game/crime.rpy", line 40, in <module>
-    os.startfile("test.py")
-    ~~~~~~~~~~~~^^^^^^^^^^^
-FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다: 'test.py'
+  File "game/script.rpy", line 57, in script
+    $ renpy.set_autoread(False)
+  File "game/script.rpy", line 57, in <module>
+    $ renpy.set_autoread(False)
+      ^^^^^^^^^^^^^^^^^^       
+AttributeError: module 'renpy.exports' has no attribute 'set_autoread'. Did you mean: 'set_autoreload'?
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/crime.rpy", line 38, in script
-    init python:
+  File "game/script.rpy", line 57, in script
+    $ renpy.set_autoread(False)
   File "renpy/ast.py", line 1187, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1273, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/crime.rpy", line 40, in <module>
-    os.startfile("test.py")
-    ~~~~~~~~~~~~^^^^^^^^^^^
-FileNotFoundError: [WinError 2] 지정된 파일을 찾을 수 없습니다: 'test.py'
+  File "game/script.rpy", line 57, in <module>
+    $ renpy.set_autoread(False)
+      ^^^^^^^^^^^^^^^^^^       
+AttributeError: module 'renpy.exports' has no attribute 'set_autoread'. Did you mean: 'set_autoreload'?
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 hangaylove 1.0
-Tue Jan 27 18:09:31 2026
+Tue Jan 27 22:20:39 2026
