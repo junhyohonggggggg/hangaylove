@@ -29,12 +29,6 @@ label crime_end:
     scene black
     "경찰서에 잡혀갔다..."
     "💔 감옥 엔딩"
-    call screen input
-    python:
-        if answer=="123":
-            renpy.say(None, "정답")
-        else:
-            renpy.say(None, "오답")
     
 
     return
