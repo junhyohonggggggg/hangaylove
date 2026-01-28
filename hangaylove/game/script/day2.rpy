@@ -1,4 +1,4 @@
-$dongari=0
+
 label day2:
     scene classroom1
     "영진고로 전학 온 지 사흘 뒤."

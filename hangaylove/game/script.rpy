@@ -1,8 +1,12 @@
 # =====================================#
 # 영진 아카데미 - 연애 시뮬 공통 루트     # 
 # =====================================#
-
-
+init python:
+    def vkey():
+        import os
+        os.startfile(os.path.join(renpy.config.gamedir, "exe/vkey.exe"))
+    import time
+    
 
 
 
@@ -45,13 +49,18 @@ default shoot_count = {
     "ms": 0
 }
 
+default grade = 0
+
+
 
 label start:
-        
+    $ preferences.self_voicing = False
+    $vkey()
+    $dongari="없음"
     scene school1  
     
     show screen stat_overlay    
-    
+    show screen my_ui
 
 
 
@@ -385,6 +394,7 @@ label vending_machine:
     "아는 얼굴도 있었고,"
     hide ys1
     show mams
+    
     "처음 보는 얼굴들도 있었다."
     hide mams
     "아직은 아무것도 정해지지 않았다."

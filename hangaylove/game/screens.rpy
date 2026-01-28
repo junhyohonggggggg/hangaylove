@@ -1611,7 +1611,7 @@ init:
     screen stat_overlay:
         frame:
             padding (15, 15)
-            background "#4f5a6680"
+            background "#3d4042c7"
             align (1.0, 0.0)
             xmaximum 250
             ymaximum 600
@@ -1680,19 +1680,51 @@ init -5 python:    # 호감도 바 스타일
 #define persistent.love = [80, 20, 10] 
 
 
+transform btn_scale:
+    zoom 0.7
+
+
+screen my_ui():
+    imagebutton:
+        xpos 10
+        ypos 10
+        idle "images/title/판사햄.png"
+        hover "images/title/판사햄black.png"
+        at btn_scale
+        action Function(switch)
+
+init:
+    python:
+        screen="호감도"
+
+        def switch():
+            global screen
+            if screen=="호감도":
+                screen="상태창"
+                renpy.hide_screen("stat_overlay")
+                renpy.show_screen("stat")
+            elif screen=="상태창":
+                screen="호감도"
+                renpy.hide_screen("stat")
+                renpy.show_screen("stat_overlay")
 
 
 
-
-
-
-
-
-
-
-
-
-
+init:
+    screen stat:
+        frame:
+            padding (15, 15)
+            background "#3d4042c7"
+            align (1.0, 0.0)
+            xmaximum 250
+            ymaximum 600
+            vbox:
+                text "상태창" size 30
+                text "이름 : 한결" size 20
+                text "나이 : 19" size 20
+                text "공부량 : [grade]" size 20
+                text "동아리 : [dongari]" size 20
+                
 
 
 
