@@ -16,7 +16,7 @@ label day5:
         if r==1:
             renpy.show("quiz1", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 고르시오")
-            renpy.call_screen("input")
+            renpy.call_screen("input_quiz")
             if answer=="3":
                 renpy.say(None, "정답")
                 score+=3
@@ -28,7 +28,7 @@ label day5:
         elif r==2:
             renpy.show("quiz2", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 고르시오")
-            renpy.call_screen("input")
+            renpy.call_screen("input_quiz")
             if answer=="2":
                 renpy.say(None, "정답")
                 score+=3
@@ -40,7 +40,7 @@ label day5:
         elif r==3:
             renpy.show("quiz3", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 고르시오")
-            renpy.call_screen("input")
+            renpy.call_screen("input_quiz")
             if answer=="5":
                 renpy.say(None, "정답")
                 score+=4
@@ -52,7 +52,7 @@ label day5:
         elif r==4:
             renpy.show("quiz4", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 입력하시오")
-            renpy.call_screen("input")
+            renpy.call_screen("input_quiz")
             if answer=="16":
                 renpy.say(None, "정답")
                 score+=3
@@ -64,7 +64,7 @@ label day5:
         elif r==5:
             renpy.show("quiz5", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 입력하시오")
-            renpy.call_screen("input")
+            renpy.call_screen("input_quiz")
             if answer=="65":
                 renpy.say(None, "정답")
                 score+=4

@@ -5,7 +5,7 @@ init python:
 
 init :
     $answer=""
-    screen input():
+    screen input_quiz():
         frame:
             xalign 0.5
             yalign 0.5
