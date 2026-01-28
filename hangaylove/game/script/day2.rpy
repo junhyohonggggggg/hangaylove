@@ -1,10 +1,13 @@
 $dongari=0
 label day2:
     scene classroom1
-    "입학식으로 부터 며칠이 흐른 후"
-    show ms3 :
-        center
-    ms "동아리 골라 어쩌구 저쩌구"
+    "영진고로 전학 온 지 사흘 뒤."
+    "시간은 나름대로 빠르게 흘렀고,"
+    "어느새, 그 날이 되었다."
+    show ms3
+    ms "야, 한결."
+    ms "쌤이 이거 갖다주라더라."
+    
     hide ms3
     menu:
         "유도부":
