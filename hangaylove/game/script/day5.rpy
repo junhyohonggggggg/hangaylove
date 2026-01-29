@@ -4,15 +4,9 @@ init:
         xalign 0.5
         yalign 0.5
 
-
-label day5:
-    scene black
-    $ import random
-    "2주 후"
-    #여기서 스터디데이트, 퀴즈 이벤트 ㅇㅇ
-    $score=0
-    $ r = random.randint(1, 5) #1번부터 5번까지중 랜덤으로 한 문제 뽑기
-    python:
+init python:
+    def quiz(r):
+        global score, grade
         if r==1:
             renpy.show("quiz1", at_list=[quiz_zoom_center])
             renpy.say(None, "정답을 고르시오")
@@ -73,5 +67,15 @@ label day5:
                 renpy.say(None, "오답")
                 
             renpy.hide("quiz5")
+label day5:
+    scene black
+    $ import random
+    "2주 후"
+    #여기서 스터디데이트, 퀴즈 이벤트 ㅇㅇ
+    $score=0
+    $ r = random.randint(1, 5) #1번부터 5번까지중 랜덤으로 한 문제 뽑기
+    $quiz(r)
+    
+        
 
     "일단 여기까지"

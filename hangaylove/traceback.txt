@@ -1,30 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 57, in script
-    $ renpy.set_autoread(False)
-  File "game/script.rpy", line 57, in <module>
-    $ renpy.set_autoread(False)
-      ^^^^^^^^^^^^^^^^^^       
-AttributeError: module 'renpy.exports' has no attribute 'set_autoread'. Did you mean: 'set_autoreload'?
+  File "game/script/day5.rpy", line 76, in script
+    $quiz(r)
+  File "game/script/day5.rpy", line 76, in <module>
+    $quiz(r)
+     ~~~~^^^
+  File "game/script/day5.rpy", line 51, in quiz
+    score+=3
+    ^^^^^   
+UnboundLocalError: cannot access local variable 'score' where it is not associated with a value
 
 -- Full Traceback ------------------------------------------------------------
 
 Traceback (most recent call last):
-  File "game/script.rpy", line 57, in script
-    $ renpy.set_autoread(False)
+  File "game/script/day5.rpy", line 76, in script
+    $quiz(r)
   File "renpy/ast.py", line 1187, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "renpy/python.py", line 1273, in py_exec_bytecode
     exec(bytecode, globals, locals)
     ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "game/script.rpy", line 57, in <module>
-    $ renpy.set_autoread(False)
-      ^^^^^^^^^^^^^^^^^^       
-AttributeError: module 'renpy.exports' has no attribute 'set_autoread'. Did you mean: 'set_autoreload'?
+  File "game/script/day5.rpy", line 76, in <module>
+    $quiz(r)
+     ~~~~^^^
+  File "game/script/day5.rpy", line 51, in quiz
+    score+=3
+    ^^^^^   
+UnboundLocalError: cannot access local variable 'score' where it is not associated with a value
 
 Windows-11-10.0.26200-SP0 AMD64
 Ren'Py 8.5.2.26010301
 hangaylove 1.0
-Tue Jan 27 22:20:39 2026
+Thu Jan 29 23:01:11 2026

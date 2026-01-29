@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/crime.rpy", line 159: expected an indented block after 'if' statement on line 133
-    find_tokens(key)
-        ^^^^^^^^^^^
+File "game/script/day5.rpy", line 77: python block expects a non-empty block.
+    python:
+           ^
 
 Ren'Py Version: Ren'Py 8.5.2.26010301
-Tue Jan 27 18:04:54 2026
+Thu Jan 29 22:59:36 2026
